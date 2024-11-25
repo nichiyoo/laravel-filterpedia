@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Bricolage Grotesque", sans-serif;
+  }
+
+  [data-theme="purple"] {
+    --color-primary: 0 13 66;
+    --color-accent: 167 139 250;
+    --color-hover: 149 120 236;
+    --color-dark: 0 13 66;
+    --color-light: 250 250 250;
+    --color-border: 240 240 240;
+    --color-text: 0 0 0;
+    --color-card: 255 255 255;
+    --color-background: 255 255 255;
+  }
+
+  [data-theme="blue"] {
+    --color-primary: 3 120 186;
+    --color-accent: 89 198 242;
+    --color-hover: 3 120 186;
+    --color-dark: 3 120 186;
+    --color-light: 250 250 250;
+    --color-border: 240 240 240;
+    --color-text: 0 0 0;
+    --color-card: 255 255 255;
+    --color-background: 255 255 255;
+  }
+
+  [data-theme="dark"] {
+    --color-primary: 3 120 186;
+    --color-accent: 89 198 242;
+    --color-hover: 3 120 186;
+    --color-dark: 20 20 20;
+    --color-light: 250 250 250;
+    --color-border: 35 35 35;
+    --color-text: 255 255 255;
+    --color-card: 25 25 25;
+    --color-background: 20 20 20;
+  }
+
+  .scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .scrollbar {
+      -ms-overflow-style: auto;
+      scrollbar-width: thin;
+    }
+    .scrollbar::-webkit-scrollbar {
+      display: block;
+    }
+  }
+
+  /* * {
+    @apply outline-1 outline-dotted outline-border;
+  } */
+
+  html,
+  body {
+    @apply scrollbar;
+  }
+
+  th {
+    @apply font-medium;
+  }
+}
